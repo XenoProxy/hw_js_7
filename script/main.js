@@ -1,9 +1,17 @@
+// TODO:
+// 1. доработать функцию выбора цвета, добавить новые цвета
+// 2. поработать над стилистикой
+
 class Lamp{
     light = true;
     color;
 
-    setColor(){
+    setGreenColor(){
         self.color = document.getElementById("lamp").style.backgroundColor = "green";
+    }
+
+    setYellowColor(){
+        self.color = document.getElementById("lamp").style.backgroundColor = "yellow";
     }
 
     // контроль яркости
@@ -14,7 +22,7 @@ class Lamp{
         lamp.style.opacity = bright;
     }
 
-    turnOn_Off(color){    
+    turnOn_Off(){    
         if(this.light){
             document.getElementById("lamp").style.backgroundColor = "rgb(23, 23, 23)";
             this.light = false;
